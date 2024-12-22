@@ -1,0 +1,59 @@
+ 
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Successful</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin-right: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      background-image: url("{% static 'images/sales5.png' %}");
+            background-size: cover;
+            opacity: 0.9;
+        
+    }
+
+    .container {
+        margin-top: 960px;
+        margin-left: 1220px;
+      text-align: center;
+      background-color: #eae8e8;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      background-color: #0b3158;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 520px;
+      margin-right: 30px;
+    }
+
+    button:hover {
+      background-color: #153252;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+  
+    <a href="/login/"><button>Go to Login</button></a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Incorrect username or password</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 90vh; 
+            background-image: url("{% static 'images/sales4.jpg' %}");
+            background-size: cover;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #c9b9c9;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0; 
+            padding: auto;
+        }
+
+        button {
+            background-color: #3c4855;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            text-decoration: none; 
+        }
+        
+        button a {
+            text-decoration: none;
+            color: white;
+        } 
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <h2>Incorrect password. Please try again.</h2>
+        <br>
+        <button><a href="/login/">Try again</a></button>
+    </div>
+</body>
+</html>

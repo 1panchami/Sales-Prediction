@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Input page Sales Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("{% static 'images/sales8.jpeg' %}");
+            background-size: cover;
+            opacity: 0.9;
+        }
+
+        .container {
+            background-color: #1d456e;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            height: 370px;
+            margin-right: 1000px;
+        }
+
+        h1 {
+            font-size: 29px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px rgb(134, 107, 107);
+            color: rgb(201, 170, 208);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #9f9c9c;
+            border-radius: 3px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #979494;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #5178a1;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0e2d4e;
+        }
+        label{
+            color: #cecaca;
+        }
+        .form-group input{
+            background-color: #d8d3d3;
+        }
+    </style>
+</head>
+<body>
+    <form class="container" action="/result/" method="post">
+        {% csrf_token %}
+        <h1>Sales Prediction</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">TV:</label>
+                <input type="number" name="tv" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Radio:</label>
+                <input type="number" name="radio" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Newspaper:</label>
+                <input type="number" name="news" required>
+            </div>
+            <br>
+            <button type="submit">Predict Sales</button>
+        </form>
+    </div>
+
+</body>
+</html>

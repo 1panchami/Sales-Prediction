@@ -1,0 +1,91 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Output page</title>
+    <link rel="stylesheet" type="text/css"> 
+    <style>
+    body{
+        background-image: url("{% static 'images/sales3.jpeg' %}");
+            background-size: cover;
+            opacity: 0.9;
+    }
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-right:700px;
+    
+        }
+
+
+.card {
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 700px;
+    
+}
+h1{
+    font-weight: bold;
+    font-size: 70px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.box {
+    text-align: center;
+    padding: 20px;
+    background-color: #032952;
+    color: rgb(230, 237, 245);
+    border-radius: 10px;
+    height: 300px;
+}
+
+.result {
+    
+    font-weight: bold;
+    font-size: 70px;
+    margin-top: 10px;
+}
+button{
+    background-color: #3c4855;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      
+        margin-left: 1400px;
+        font-size: 25px;
+        
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <button><a href="/login/">Logout</a></button>
+
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="box">
+                <h1 class="text-success">Predicted Sales</h1>
+                <h1 class="result">{{ result }}</h1>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
